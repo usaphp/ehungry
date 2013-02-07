@@ -1,0 +1,40 @@
+// -------------------------
+// Custom Grid System
+// -------------------------
+.row-custom {
+  width: 100%;
+  .clearfix();
+  margin-bottom: @baseLineHeight*2;
+
+  // Size for page with just order info
+  .size-has-right-panel {
+    width: 70%;
+  }
+  // Size for a page with just a side menu
+  .size-has-left-panel {
+    width: 80%;
+  }
+  // Size for page with side menu and side order info
+  .size-has-both-panels {
+    width: 50%;
+  }
+  // Size for side menu
+  .side-menu-w {
+    width: 20%;
+  }
+  // Size for side order info
+  .side-cart-w {
+    width: 30%;
+  }
+  .side-menu-w, .side-cart-w {
+    display: block;
+    float: left;
+    padding-top: 20px;
+  }
+}
+
+// Apply default style to all size- elements
+.row-custom [class*="size-"] {
+  display: block;
+  float: left;
+}
