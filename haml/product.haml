@@ -1,0 +1,204 @@
+!!!
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+/ [if gt IE 8]><!
+%html.no-js
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    %title eHungry
+    %link{ :href => "assets/css/app.css", :rel => "stylesheet", :media => "screen" }
+    %link{ :href => "http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800", :rel => "stylesheet", :type => "text/css" }
+    %script{ :src => "assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" }
+  %body.bg-pizza
+    // Show chrome frame if browser is lower than IE 7
+    /[if lt IE 7] <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    .navbar.navbar-inverse
+      .navbar-inner
+        .container
+          %ul.nav.visible-phone.pull-left.view-menu-side-nav
+            %li
+              %a.toggle-menu-side-btn{:href => "#", "data-active-label" => "Menu", "data-inactive-label" => "Menu"}
+                %i.icon-th-list
+                %i.icon-remove
+                %span.hidden-phone Menu
+          %a.brand{ :href => "index.html" }
+            %i.icon-cloud
+            Classic Pizza
+          %ul.nav.hidden-phone
+            %li
+              %a{ :href => "index.html" }
+                %i.icon-home
+                Home
+            %li
+              %a{ :href => "menu.html" }
+                %i.icon-th-list
+                Menu
+          %ul.nav.hidden-desktop.pull-right.view-cart-side-nav
+            %li
+              %a.toggle-cart-side-btn{:href => "#", "data-active-label" => "View Cart", "data-inactive-label" => "Hide Cart"}
+                %i.icon-shopping-cart
+                %i.icon-remove
+                %span.hidden-phone View Cart
+          .top-buttons-w.pull-right.visible-desktop
+            %a.btn.btn-primary{:href => "login.html"}
+              %i.icon-user
+              Login
+            %a.btn.btn-warning{:href => "cart.html"}
+              %i.icon-ok-sign
+              My Order
+    .container
+      .row-custom
+        .side-menu-w
+          .left-menu-w
+            .padded-nb
+              %h1.main-header
+                %i.icon-reorder
+                Menu
+            %ul.side-menu
+              %li
+                %a{:href => "category.html"} Salads
+              %li
+                %a.selected{:href => "category.html"} Appetizers
+              %li
+                %a{:href => "category.html"} Make Pizza
+              %li
+                %a{:href => "category.html"} Sandwiches
+              %li
+                %a{:href => "category.html"} Beverages
+        .size-has-both-panels
+          .main-content-w
+            .padded-nt
+              %ul.breadcrumb
+                %li
+                  %a{:href => "home.html"} Home
+                  %span.divider.icon-angle-right
+                %li
+                  %a{:href => "category.html"} Appetizers
+                  %span.divider.icon-angle-right
+                %li.active Breadsticks
+              %form.product-form-w{:action => "#"}
+                .row-fluid.product-main-info
+                  .span8
+                    %h1.main-header.has-sub-header.first-header Breadsticks
+                    %h4.sub-header Hot from the oven homemade breadsticks with our special dipping sauce!
+                    .product-options
+                      .product-option
+                        %label.radio{:for => ""}
+                          %input{:type => "radio", :checked => "checked"}
+                          Single Order (2 Sticks):
+                          %strong $1.99
+                      .product-option
+                        %label.radio{:for => ""}
+                          %input{:type => "radio"}
+                          Family Order (5 Sticks):
+                          %strong $3.49
+                  .span4
+                    .product-img
+                      %img{:src => "assets/images/products/burger.jpg", :alt => ""}
+                .row-fluid
+                  .span6
+                    %h5.option-header Options
+                    .controls
+                      %label{:for => ""} Salad Dressing
+                      %select.span10
+                        %option{:value => "French"} French
+                        %option{:value => "Caesar"} Caesar
+                  .span6
+                    %h5.option-header Menu Buddies
+                    .controls
+                      %label{:for => ""}
+                        This item is for
+                        %a.icon-question-sign{ :href => "#", :rel => "tooltip", "data-placement" => "top", "data-original-title" => "If ordering for a group, you can specify who each item in your order is for! We will package your order to make it easy to split it up when its time to eat." }
+                      %input.span12{:type => "text", :placeholder => "Enter a name"}
+                .controls.row-fluid
+                  %label{:for => ""} Special Instructions
+                  %textarea.span12{:name => "", :cols => "50", :rows => "4", :placeholder => "Enter special instructions..."}
+                .form-actions.form-inline.aligh-right
+                  %label{:for => ""} Quantity:
+                  %input.quantity-input{:type => "text", :placeholder => "Qty", :value => 1}
+                  %button.btn.btn-primary.btn-large
+                    %i.icon-plus
+                    Add to Cart
+        .side-cart-w
+          .side-cart-i
+            .padded
+              %h1.main-header.first-header
+                %i.icon-shopping-cart
+                My Order
+              .cart-items-w
+                %ul.cart-items
+                  %li
+                    .row-fluid
+                      .span4
+                        .product-img
+                          %img{:src => "assets/images/products/breadstick.jpg", :alt => ""}
+                      .span8
+                        .product-title Breadsticks
+                        %p.product-desc $1.99 ea. (Single Order)
+                        %button.btn.btn-mini.btn-primary
+                          %i.icon-pencil
+                          Change
+                        %button.btn.btn-mini.btn-danger
+                          %i.icon-remove
+                          Remove
+                  %li
+                    .row-fluid
+                      .span4
+                        .product-img
+                          %img{:src => "assets/images/products/caesar.jpg", :alt => ""}
+                      .span8
+                        .product-title Caesar Salad
+                        %p.product-desc $3.99 ea. (Side Salad)
+                        %button.btn.btn-mini.btn-primary
+                          %i.icon-pencil
+                          Change
+                        %button.btn.btn-mini.btn-danger
+                          %i.icon-remove
+                          Remove
+                  %li
+                    .row-fluid
+                      .span4
+                        .product-img
+                          %img{:src => "assets/images/products/burger.jpg", :alt => ""}
+                      .span8
+                        .product-title Super Burger
+                        %p.product-desc $5.99 ea. (Beef Burger)
+                        %button.btn.btn-mini.btn-primary
+                          %i.icon-pencil
+                          Change
+                        %button.btn.btn-mini.btn-danger
+                          %i.icon-remove
+                          Remove
+                .order-facts
+                  .of-ordered 3 Items Ordered
+                  .of-subtotal
+                    Current Subtotal:
+                    %strong $7.99
+                %a.btn.btn-large.btn-warning{:href => "checkout.html"}
+                  Checkout
+                  %i.icon-circle-arrow-right
+              .no-items{ :style => "display:none" } You currently have no items in your cart.
+    .footer
+      .container
+        .row
+          .span6
+            .copyright
+              Online Ordering Powered by eHungry.com
+          .span6
+            %ul.inline.menu
+              %li
+                %a{:href => "index.html"} Home
+              %li
+                %a{:href => "menu.html"} Menu
+              %li
+                %a{:href => "login.html"} Login
+              %li
+                %a{:href => "#"} Register
+    %script{ :src => "assets/js/vendor/jquery-1.9.0.min.js" }
+    %script{ :src => "assets/js/vendor/bootstrap/bootstrap.js" }
+    %script{ :src => "assets/js/app.js" }

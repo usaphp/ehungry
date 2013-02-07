@@ -1,0 +1,185 @@
+!!!
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+/ [if gt IE 8]><!
+%html.no-js
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    %title eHungry
+    %link{ :href => "assets/css/app.css", :rel => "stylesheet", :media => "screen" }
+    %link{ :href => "http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800", :rel => "stylesheet", :type => "text/css" }
+    %script{ :src => "assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" }
+  %body.bg-pizza
+    // Show chrome frame if browser is lower than IE 7
+    /[if lt IE 7] <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    .navbar.navbar-inverse
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{ "data-toggle" => "collapse", "data-target" => ".nav-collapse" }
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{ :href => "index.html" }
+            %i.icon-cloud
+            Classic Pizza
+          .nav-collapse.collapse
+            %ul.nav
+              %li
+                %a{ :href => "index.html" }
+                  %i.icon-home
+                  Home
+              %li
+                %a{ :href => "menu.html" }
+                  %i.icon-th-list
+                  Menu
+          .top-buttons-w.pull-right
+            %a.btn.btn-primary{:href => "login.html"}
+              %i.icon-user
+              Login
+            %a.btn.btn-warning{:href => "cart.html"}
+              %i.icon-ok-sign
+              My Order
+    .container
+      .row-custom
+        .side-menu-w
+          .left-menu-w
+            .padded-nb
+              %h1.main-header
+                %i.icon-reorder
+                Menu
+            %ul.side-menu
+              %li
+                %a{:href => "category.html"} Salads
+              %li
+                %a.selected{:href => "category.html"} Appetizers
+              %li
+                %a{:href => "category.html"} Make Pizza
+              %li
+                %a{:href => "category.html"} Sandwiches
+              %li
+                %a{:href => "category.html"} Beverages
+        .size-has-both-panels
+          .main-content-w
+            .padded
+              %h1.main-header.has-sub-header.first-header Appetizers
+              %h4.sub-header Try out one of our delicious appetizers
+              %ul.product-list
+                %li
+                  %a.product-title{:href => "product.html"}  Classic Caesar Salad
+                  %p.product-desc Romaine lettuce, parmesan Cheese and Croutons. Includes our Homemade Ceasar Dressing.
+                  .product-options
+                    .product-option
+                      %i.icon-food
+                      Side Salad:
+                      %strong $3.99
+                    .product-option
+                      %i.icon-food
+                      Meal Salad:
+                      %strong $6.99
+                  .product-buttons.no-photo
+                    %a.btn.btn-primary.btn-mini{:href => "product.html"}
+                      Select this item
+                      %i.icon-circle-arrow-right
+                %li
+                  %a.product-title{:href => "product.html"}  Breadsticks
+                  %p.product-desc Hot from the oven homemade breadsticks with our special dipping sauce!
+                  .product-options
+                    .product-option
+                      %i.icon-food
+                      Single Order (2 Sticks):
+                      %strong $3.99
+                    .product-option
+                      %i.icon-food
+                      Family Order (5 Sticks):
+                      %strong $6.99
+                  .product-buttons.no-photo
+                    %a.btn.btn-primary.btn-mini{:href => "product.html"}
+                      Select this item
+                      %i.icon-circle-arrow-right
+                %li
+                  %a.product-title{:href => "product.html"}  Super Burger
+                  %p.product-desc Ham, turkey and roast beef with lettuce, tomato and mayonnaise.
+                  .product-options
+                    .product-option
+                      %i.icon-food
+                      Beef Burger
+                      %strong $6.99
+                    .product-option
+                      %i.icon-food
+                      Ham Burger
+                      %strong $7.99
+                  .product-buttons.no-photo
+                    %a.btn.btn-primary.btn-mini{:href => "product.html"}
+                      Select this item
+                      %i.icon-circle-arrow-right
+        .side-cart-w
+          .side-cart-i
+            .padded
+              %h1.main-header.first-header
+                %i.icon-shopping-cart
+                My Order
+              .cart-items-w
+                %ul.cart-items
+                  %li
+                    .product-title Breadsticks
+                    %p.product-desc $1.99 ea. (Single Order)
+                    .cart-item-buttons
+                      %a.cart-btn-change{:href => "#"}
+                        %i.icon-pencil
+                        Change
+                      %a.cart-btn-remove{:href => "#"}
+                        %i.icon-remove
+                        Remove
+                  %li
+                    .product-title Caesar Salad
+                    %p.product-desc $3.99 ea. (Side Salad)
+                    .cart-item-buttons
+                      %a.cart-btn-change{:href => "#"}
+                        %i.icon-pencil
+                        Change
+                      %a.cart-btn-remove{:href => "#"}
+                        %i.icon-remove
+                        Remove
+                  %li
+                    .product-title Super Burger
+                    %p.product-desc $5.99 ea. (Beef Burger)
+                    .cart-item-buttons
+                      %a.cart-btn-change{:href => "#"}
+                        %i.icon-pencil
+                        Change
+                      %a.cart-btn-remove{:href => "#"}
+                        %i.icon-remove
+                        Remove
+                .order-facts
+                  .of-ordered 3 Items Ordered
+                  .of-subtotal
+                    Current Subtotal:
+                    %strong $7.99
+                %a.btn.btn-large.btn-warning{:href => "checkout.html"}
+                  Checkout
+                  %i.icon-circle-arrow-right
+              .no-items{ :style => "display:none" } You currently have no items in your cart.
+    .footer
+      .container
+        .row
+          .span6
+            .copyright
+              Online Ordering Powered by eHungry.com
+          .span6
+            %ul.inline.menu
+              %li
+                %a{:href => "index.html"} Home
+              %li
+                %a{:href => "menu.html"} Menu
+              %li
+                %a{:href => "login.html"} Login
+              %li
+                %a{:href => "#"} Register
+    %script{ :src => "assets/js/vendor/jquery-1.9.0.min.js" }
+    %script{ :src => "assets/js/vendor/bootstrap/bootstrap.js" }
+    %script{ :src => "assets/js/app.js" }
