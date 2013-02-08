@@ -1,0 +1,284 @@
+!!!
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+/ [if gt IE 8]><!
+%html.no-js
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    %title eHungry
+    %link{ :href => "assets/css/app.css", :rel => "stylesheet", :media => "screen" }
+    %link{ :href => "http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800", :rel => "stylesheet", :type => "text/css" }
+    %script{ :src => "assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" }
+  %body.bg-pizza
+    // Show chrome frame if browser is lower than IE 7
+    /[if lt IE 7] <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    .navbar.navbar-inverse
+      .navbar-inner
+        .container
+          %ul.nav.visible-phone.pull-left.view-menu-side-nav
+            %li
+              %a.toggle-menu-side-btn{:href => "#", "data-active-label" => "Menu", "data-inactive-label" => "Menu"}
+                %i.icon-th-list
+                %i.icon-remove
+                %span.hidden-phone Menu
+          %a.brand{ :href => "index.html" }
+            %i.icon-cloud
+            Classic Pizza
+          %ul.nav.hidden-phone
+            %li
+              %a{ :href => "index.html" }
+                %i.icon-home
+                Home
+            %li
+              %a{ :href => "menu.html" }
+                %i.icon-th-list
+                Menu
+          .top-buttons-w.pull-right.visible-desktop
+            %a.btn.btn-primary{:href => "login.html"}
+              %i.icon-user
+              Login
+            %a.btn.btn-warning{:href => "cart.html"}
+              %i.icon-ok-sign
+              My Order
+    .container
+      .row-custom
+        .side-menu-w.visible-desktop.visible-phone
+          .side-menu-i
+            .padded-nb
+              %h1.main-header
+                %i.icon-reorder
+                Menu
+            %ul.side-menu
+              %li
+                %a{:href => "category.html"} Salads
+              %li
+                %a.selected{:href => "category.html"} Appetizers
+              %li
+                %a{:href => "category.html"} Make Pizza
+              %li
+                %a{:href => "category.html"} Sandwiches
+              %li
+                %a{:href => "category.html"} Beverages
+        .size-has-left-panel
+          .main-content-w
+            .padded-nt
+              %ul.breadcrumb
+                %li
+                  %a{:href => "home.html"} Home
+                  %span.divider.icon-angle-right
+                %li
+                  %a{:href => "cart.html"} Shopping Cart
+                  %span.divider.icon-angle-right
+                %li.active Checkout
+              %h1.main-header.has-sub-header.first-header Check Out
+              %h4.sub-header.warning-header
+                Please provide the necessary information below and then click the
+                %strong Checkout Now
+                button.
+              %ul.checkout-order-info
+                %li
+                  %i.icon-ok
+                  Your order is for
+                  %strong Pickup
+                  %a{:href => "#"} [change order type]
+                  \.
+                %li
+                  %i.icon-ok
+                  You said you wanted it
+                  %strong as soon as possible
+                  \.
+                %li
+                  %i.icon-ok
+                  Your order is scheduled for
+                  %strong Feb 05, 2013 @ 12:09 PM
+                  %a{:href => "#"} [change scheduled time]
+                  \.
+              %form{:action => "#"}
+                %table.table.cart-table.hidden-phone
+                  %thead
+                    %tr
+                      %th For
+                      %th Item Name
+                      %th Quantity
+                      %th.align-right Total Price
+                  %tbody
+                    %tr
+                      %td Me
+                      %td
+                        .cart-item-title 1 Green Salad (Side Salad)
+                        .cart-item-desc
+                          \- with Salad Dressing (Light Ranch):
+                          %strong $1.99
+                        .cart-item-desc
+                          \- with mushrooms topping:
+                          %strong $2.99
+                        .cart-item-desc
+                          \- with onions:
+                          %strong $1.99
+                        .cart-item-desc
+                          Special Instructions: Please include napkins.
+                      %td.cart-item-quantity
+                        [
+                        %strong 2
+                        x $3.99]
+                      %td.cart-item-price $6.99
+                    %tr
+                      %td Steve
+                      %td
+                        .cart-item-title 1 Chicken Wings ( 5 Wings )
+                        .cart-item-desc
+                          \- with Wing Sauce (Hot):
+                          %strong Free
+                      %td.cart-item-quantity
+                        [
+                        %strong 1
+                        x $3.99]
+                      %td.cart-item-price $4.99
+                    %tr
+                      %td Tamik
+                      %td
+                        .cart-item-title 1 Breadsticks ( 5 pieces )
+                        .cart-item-desc
+                          \- with Salad Dressing (Light Ranch):
+                          %strong $1.99
+                      %td.cart-item-quantity
+                        [
+                        %strong 1
+                        x $3.99]
+                      %td.cart-item-price
+                        $3.99
+                    %tr.cart-sub-totals
+                      %td
+                      %td
+                      %td.align-right.cell-label Subtotal:
+                      %td.align-right.cell-sub-total $15.99
+                    %tr.cart-sub-totals
+                      %td
+                      %td
+                      %td.align-right.cell-label Coupon:
+                      %td.align-right.cell-coupon No Coupon applied
+                    %tr.cart-sub-totals
+                      %td
+                      %td
+                      %td.align-right.cell-label Tax (5%):
+                      %td.align-right $0.30
+                    %tr.cart-sub-totals
+                      %td
+                      %td
+                      %td.align-right.cell-label Tip:
+                      %td.align-right
+                        .input-prepend.cart-tip-input
+                          %span.add-on $
+                          %input{:type => "text", :value => "0.00"}
+                    %tr.cart-total-row
+                      %td
+                      %td
+                      %td.align-right.cell-label Total:
+                      %td.align-right.cell-value $24.99
+                %table.table.cart-table.visible-phone
+                  %thead
+                    %tr
+                      %th Item Info
+                      %th.align-right Total Price
+                  %tbody
+                    %tr
+                      %td
+                        .cart-item-title 1 Breadsticks ( 5 pieces )
+                        .cart-item-desc
+                          Qty:
+                          %strong 1
+                          x $1.99
+                        .cart-item-desc
+                          \- with Salad Dressing (Light Ranch):
+                          %strong $1.99
+                        .cart-item-desc
+                          \- for
+                          %strong me
+                      %td.cart-item-price $6.99
+                    %tr
+                      %td
+                        .cart-item-title 1 Chicken Wings ( 5 Wings )
+                        .cart-item-desc
+                          Qty:
+                          %strong 2
+                          x $1.99
+                        .cart-item-desc
+                          \- with Salad Dressing (Light Ranch):
+                          %strong $1.99
+                        .cart-item-desc
+                          \- with mushrooms topping:
+                          %strong $2.99
+                        .cart-item-desc
+                          \- for
+                          %strong Mike
+                      %td.cart-item-price $6.99
+                    %tr.cart-sub-totals
+                      %td.align-right.cell-label Subtotal:
+                      %td.align-right.cell-sub-total $15.99
+                    %tr.cart-sub-totals
+                      %td.align-right.cell-label Coupon:
+                      %td.align-right.cell-coupon No Coupon applied
+                    %tr.cart-sub-totals
+                      %td.align-right.cell-label Tax (5%):
+                      %td.align-right $0.30
+                    %tr.cart-sub-totals
+                      %td.align-right.cell-label Tip:
+                      %td.align-right
+                        .input-prepend.cart-tip-input
+                          %span.add-on $
+                          %input{:type => "text", :value => "0.00"}
+                    %tr.cart-total-row
+                      %td.align-right.cell-label Total:
+                      %td.align-right.cell-value $24.99
+
+                %h5.bordered-header Additional Information
+                .row-fluid
+                  .span4
+                    .controls.row-fluid
+                      %label{:for => ""} Your callback number:
+                      %input.span10{:type => "text", :placeholder => "Your phone number"}
+                  .span8
+                    .controls.row-fluid
+                      %label{:for => ""} Special Instructions:
+                      %textarea.span12{:name => "", :cols => "30", :rows => "3", :placeholder => "Your special instructions"}
+                %h5.bordered-header Payment Options
+                %label.radio{:for => ""}
+                  %input{:type => "radio", :checked => "checked"}
+                  Pay at time of pick-up or delivery
+                  %br
+                  %span.radio-tip (We accept Visa, MasterCard, Discover, Amex, Cash and Check)
+                %label.radio{:for => ""}
+                  %input{:type => "radio"}
+                  Pay with a credit card
+                .alert
+                  You have no credit cards setup for your account.
+                  %a{:href => "#"} Click here
+                  to add one now.
+                .checkout-payment-warning Please only click the button below once to place your order. Note that it may take a few seconds to process.
+                .checkout-buttons
+                  %a.btn.btn-primary.btn-large{:href => "#"} Place your order
+
+    .footer
+      .container
+        .row
+          .span6
+            .copyright
+              Online Ordering Powered by eHungry.com
+          .span6
+            %ul.inline.menu
+              %li
+                %a{:href => "index.html"} Home
+              %li
+                %a{:href => "menu.html"} Menu
+              %li
+                %a{:href => "login.html"} Login
+              %li
+                %a{:href => "#"} Register
+    %script{ :src => "assets/js/vendor/jquery-1.9.0.min.js" }
+    %script{ :src => "assets/js/vendor/bootstrap/bootstrap.js" }
+    %script{ :src => "assets/js/app.js" }

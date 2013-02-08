@@ -1,0 +1,289 @@
+// -------------------------
+// All mobile devices
+// -------------------------
+@media (max-width: 979px) {
+  // remove margin from top navigation bar
+  .navbar {
+    margin-bottom: 0px;
+  }
+  // make container full width
+  .container {
+    width: auto;
+  }
+  // remove rounded borders
+  .side-menu-i, .main-content-w, .side-cart-i {
+    .border-radius(0px);
+  }
+  // Remove bottom margin from main layout element
+  .row-custom {
+    margin-bottom: 0px;
+  }
+  // Hide the overflow for off canvas elements
+  .row-custom {
+    overflow: hidden;
+    // remove paddings from sliding side bars
+    .side-cart-w {
+      padding-top: 0px;
+    }
+    .side-menu-w {
+      padding-top: 0px;
+    }
+  }
+
+  // Reduce margin on the left side menu element for tablets
+  .side-cart-w, .side-menu-w {
+    .main-header {
+      margin-top: 0px;
+      font-size: 22px;
+      line-height: 26px;
+      padding: 5px 0px;
+    }
+    .padded-nb, .padded {
+      padding-top: 10px;
+    }
+  }
+  // right align header of the menu on left side panel
+  .side-menu-w .main-header {
+    text-align: right;
+  }
+  // Reduce the size of the large button
+  .btn.btn-large {
+    font-size: 18px;
+  }
+  // Reduce the size of the headers
+  .main-content-w .main-header {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .main-content-w .main-header + .sub-header {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+// -------------------------
+// Tablet to Desktop
+// -------------------------
+@media (min-width: 768px) and (max-width: 979px) {
+  // Reduce brand font size
+  .navbar .brand {
+    font-size: 28px;
+  }
+  // reduce size of top navigation items
+  .navbar .nav > li > a {
+    font-size: 18px;
+  }
+  // Adjust column positions and margins for tablet view
+  .row-custom {
+    overflow: hidden;
+    // Set transitions
+    .size-has-both-panels, .size-has-right-panel, .size-has-left-panel, .side-cart-w {
+      .transition(all 1s ease);
+    }
+    // side menu
+    .side-menu-w {
+      width: 22%;
+    }
+    // main element in the middle
+    .size-has-both-panels {
+      width: 78%;
+    }
+    .size-has-right-panel {
+      width: 100%;
+    }
+    .size-has-left-panel {
+      width: 100%;
+    }
+    // side cart
+    .side-cart-w {
+      margin-left: -60%;
+      position: relative;
+      z-index: 2;
+      width: 300px;
+    }
+  }
+  // "Active" styles for the visible shopping cart state
+  .active-side-cart {
+    .row-custom {
+      .size-has-both-panels {
+        margin-left: -300px;
+      }
+      .size-has-right-panel {
+        margin-left: -300px;
+      }
+      .side-cart-w {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// -------------------------
+// Phone to desktop/tablet
+// -------------------------
+@media (max-width: 767px) {
+
+  // Update Shopping cart styles for phones
+  .main-content-w {
+    .main-header + .sub-header.warning-header {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 10px;
+    }
+    .checkout-order-info {
+      li {
+        margin-bottom: 5px;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    .cart-table {
+      td, th {
+        font-size: 12px;
+        line-height: 16px;
+        padding: 4px;
+      }
+      .cart-item-title {
+        font-size: 14px;
+        line-height: 18px;
+      }
+      .cart-item-price {
+        font-size: 14px;
+        line-height: 18px;
+      }
+      .cart-total-row .cell-value, .cart-total-row .cell-label {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      .cart-item-desc {
+        padding-left: 5px;
+        font-size: 11px;
+      }
+      .cart-sub-totals {
+        .cell-sub-total {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .cell-label {
+          font-size: 12px;
+          line-height: 16px;
+        }
+        td {
+          padding: 4px;
+        }
+      }
+    }
+    // Make less padding for "padded" classes
+    .padded-nt {
+      padding: 0px 15px 20px;
+    }
+    .padded {
+      padding: 15px;
+    }
+    // add some margin and alignment to the add to cart button
+    .product-list li .product-buttons {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
+  // reduce brand font size and padding
+  .navbar .brand {
+    font-size: 16px;
+    line-height: 24px;
+    display: inline-block;
+    padding: 17px;
+    float: none;
+  }
+  .navbar {
+    text-align: center;
+    .nav li {
+      padding: 10px 0px;
+    }
+  }
+  // change a height of top bar to auto
+  .navbar-inner {
+    min-height: 100%;
+    padding: 0px 10px;
+  }
+  // Set transitions
+  .size-has-both-panels, .size-has-right-panel, .size-has-left-panel, .side-cart-w, .side-menu-w {
+    .transition(all 0.5s ease);
+  }
+  // adjust columns for proper view on mobile devices
+  .row-custom {
+    overflow: hidden;
+    // default styles for side side menu panel
+    .side-menu-w {
+      margin-left: -60%;
+      position: relative;
+      z-index: 2;
+      width: 200px;
+    }
+    // make all the main content holders 100% width - so on phones it takes up all the available real estate by default
+    .size-has-both-panels {
+      width: 100%;
+    }
+    .size-has-right-panel {
+      width: 100%;
+    }
+    .size-has-left-panel {
+      width: 100%;
+    }
+    // default styles for side shopping cart panel
+    .side-cart-w {
+      margin-left: -60%;
+      position: relative;
+      z-index: 2;
+      width: 200px;
+    }
+  }
+  // "Active" styles for the visible shopping cart state
+  .active-side-cart {
+    .row-custom {
+      .size-has-both-panels {
+        margin-left: -200px;
+      }
+      .size-has-right-panel {
+        margin-left: -200px;
+      }
+      .size-has-left-panel {
+        margin-left: -200px;
+      }
+      .side-cart-w {
+        margin-left: 0px;
+        margin-right: 0px;
+        z-index: 3;
+      }
+    }
+  }
+  // "Active" styles for the visible side menu state
+  .active-side-menu {
+    .row-custom {
+      .size-has-both-panels {
+        margin-right: -200px;
+      }
+      .size-has-left-panel {
+        margin-right: -200px;
+      }
+      .side-menu-w {
+        margin-left: 0px;
+        z-index: 3;
+      }
+    }
+  }
+  // center footer items
+  .footer {
+    text-align: center;
+    .menu {
+      float: none;
+    }
+  }
+  .map-w {
+    margin-bottom: 10px;
+  }
+}
+
+// Up to Phone
+@media (max-width: 480px) {
+}
