@@ -8848,10 +8848,10 @@ body {
   .row-custom .size-has-right-panel,
   .row-custom .size-has-left-panel,
   .row-custom .side-cart-w {
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
   }
   .row-custom .side-menu-w {
     width: 22%;
@@ -8967,9 +8967,9 @@ body {
     overflow: hidden;
   }
   .row-custom .side-menu-w {
-    margin-left: -60%;
+    margin-left: -100%;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     width: 200px;
   }
   .row-custom .size-has-both-panels {
@@ -8982,7 +8982,7 @@ body {
     width: 100%;
   }
   .row-custom .side-cart-w {
-    margin-left: -60%;
+    margin-left: -150%;
     position: relative;
     z-index: 2;
     width: 200px;
