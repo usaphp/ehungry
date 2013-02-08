@@ -21,32 +21,34 @@
     <div class='navbar navbar-inverse'>
       <div class='navbar-inner'>
         <div class='container'>
-          <a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-          </a>
+          <ul class='nav visible-phone pull-left view-menu-side-nav'>
+            <li>
+              <a class='toggle-menu-side-btn' data-active-label='Menu' data-inactive-label='Menu' href='#'>
+                <i class='icon-th-list'></i>
+                <i class='icon-remove'></i>
+                <span class='hidden-phone'>Menu</span>
+              </a>
+            </li>
+          </ul>
           <a class='brand' href='index.html'>
             <i class='icon-cloud'></i>
             Classic Pizza
           </a>
-          <div class='nav-collapse collapse'>
-            <ul class='nav'>
-              <li>
-                <a href='index.html'>
-                  <i class='icon-home'></i>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href='menu.html'>
-                  <i class='icon-th-list'></i>
-                  Menu
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class='top-buttons-w pull-right'>
+          <ul class='nav hidden-phone'>
+            <li>
+              <a href='index.html'>
+                <i class='icon-home'></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href='menu.html'>
+                <i class='icon-th-list'></i>
+                Menu
+              </a>
+            </li>
+          </ul>
+          <div class='top-buttons-w pull-right visible-desktop'>
             <a class='btn btn-primary' href='login.html'>
               <i class='icon-user'></i>
               Login
@@ -61,8 +63,8 @@
     </div>
     <div class='container'>
       <div class='row-custom'>
-        <div class='side-menu-w'>
-          <div class='left-menu-w'>
+        <div class='side-menu-w visible-desktop visible-phone'>
+          <div class='side-menu-i'>
             <div class='padded-nb'>
               <h1 class='main-header'>
                 <i class='icon-reorder'></i>
@@ -131,7 +133,7 @@
                 </li>
               </ul>
               <form action='#'>
-                <table class='table cart-table'>
+                <table class='table cart-table hidden-phone'>
                   <thead>
                     <tr>
                       <th>For</th>
@@ -146,15 +148,15 @@
                       <td>
                         <div class='cart-item-title'>1 Green Salad (Side Salad)</div>
                         <div class='cart-item-desc'>
-                          - with Salad Dressing (Light Ranch) -
+                          - with Salad Dressing (Light Ranch):
                           <strong>$1.99</strong>
                         </div>
                         <div class='cart-item-desc'>
-                          - with mushrooms topping -
+                          - with mushrooms topping:
                           <strong>$2.99</strong>
                         </div>
                         <div class='cart-item-desc'>
-                          - with onions -
+                          - with onions:
                           <strong>$1.99</strong>
                         </div>
                         <div class='cart-item-desc'>
@@ -173,7 +175,7 @@
                       <td>
                         <div class='cart-item-title'>1 Chicken Wings ( 5 Wings )</div>
                         <div class='cart-item-desc'>
-                          - with Wing Sauce (Hot) -
+                          - with Wing Sauce (Hot):
                           <strong>Free</strong>
                         </div>
                       </td>
@@ -189,7 +191,7 @@
                       <td>
                         <div class='cart-item-title'>1 Breadsticks ( 5 pieces )</div>
                         <div class='cart-item-desc'>
-                          - with Salad Dressing (Light Ranch) -
+                          - with Salad Dressing (Light Ranch):
                           <strong>$1.99</strong>
                         </div>
                       </td>
@@ -203,19 +205,27 @@
                       </td>
                     </tr>
                     <tr class='cart-sub-totals'>
-                      <td class='align-right cell-label' colspan='3'>Subtotal:</td>
+                      <td></td>
+                      <td></td>
+                      <td class='align-right cell-label'>Subtotal:</td>
                       <td class='align-right cell-sub-total'>$15.99</td>
                     </tr>
                     <tr class='cart-sub-totals'>
-                      <td class='align-right cell-label' colspan='3'>Coupon:</td>
+                      <td></td>
+                      <td></td>
+                      <td class='align-right cell-label'>Coupon:</td>
                       <td class='align-right cell-coupon'>No Coupon applied</td>
                     </tr>
                     <tr class='cart-sub-totals'>
-                      <td class='align-right cell-label' colspan='3'>Tax (5%):</td>
+                      <td></td>
+                      <td></td>
+                      <td class='align-right cell-label'>Tax (5%):</td>
                       <td class='align-right'>$0.30</td>
                     </tr>
                     <tr class='cart-sub-totals'>
-                      <td class='align-right cell-label' colspan='3'>Tip:</td>
+                      <td></td>
+                      <td></td>
+                      <td class='align-right cell-label'>Tip:</td>
                       <td class='align-right'>
                         <div class='input-prepend cart-tip-input'>
                           <span class='add-on'>$</span>
@@ -224,7 +234,86 @@
                       </td>
                     </tr>
                     <tr class='cart-total-row'>
-                      <td class='align-right cell-label' colspan='3'>Total:</td>
+                      <td></td>
+                      <td></td>
+                      <td class='align-right cell-label'>Total:</td>
+                      <td class='align-right cell-value'>$24.99</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class='table cart-table visible-phone'>
+                  <thead>
+                    <tr>
+                      <th>Item Info</th>
+                      <th class='align-right'>Total Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class='cart-item-title'>1 Breadsticks ( 5 pieces )</div>
+                        <div class='cart-item-desc'>
+                          Qty:
+                          <strong>1</strong>
+                          x $1.99
+                        </div>
+                        <div class='cart-item-desc'>
+                          - with Salad Dressing (Light Ranch):
+                          <strong>$1.99</strong>
+                        </div>
+                        <div class='cart-item-desc'>
+                          - for
+                          <strong>me</strong>
+                        </div>
+                      </td>
+                      <td class='cart-item-price'>$6.99</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class='cart-item-title'>1 Chicken Wings ( 5 Wings )</div>
+                        <div class='cart-item-desc'>
+                          Qty:
+                          <strong>2</strong>
+                          x $1.99
+                        </div>
+                        <div class='cart-item-desc'>
+                          - with Salad Dressing (Light Ranch):
+                          <strong>$1.99</strong>
+                        </div>
+                        <div class='cart-item-desc'>
+                          - with mushrooms topping:
+                          <strong>$2.99</strong>
+                        </div>
+                        <div class='cart-item-desc'>
+                          - for
+                          <strong>Mike</strong>
+                        </div>
+                      </td>
+                      <td class='cart-item-price'>$6.99</td>
+                    </tr>
+                    <tr class='cart-sub-totals'>
+                      <td class='align-right cell-label'>Subtotal:</td>
+                      <td class='align-right cell-sub-total'>$15.99</td>
+                    </tr>
+                    <tr class='cart-sub-totals'>
+                      <td class='align-right cell-label'>Coupon:</td>
+                      <td class='align-right cell-coupon'>No Coupon applied</td>
+                    </tr>
+                    <tr class='cart-sub-totals'>
+                      <td class='align-right cell-label'>Tax (5%):</td>
+                      <td class='align-right'>$0.30</td>
+                    </tr>
+                    <tr class='cart-sub-totals'>
+                      <td class='align-right cell-label'>Tip:</td>
+                      <td class='align-right'>
+                        <div class='input-prepend cart-tip-input'>
+                          <span class='add-on'>$</span>
+                          <input type='text' value='0.00'>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class='cart-total-row'>
+                      <td class='align-right cell-label'>Total:</td>
                       <td class='align-right cell-value'>$24.99</td>
                     </tr>
                   </tbody>

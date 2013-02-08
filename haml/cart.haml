@@ -20,24 +20,25 @@
     .navbar.navbar-inverse
       .navbar-inner
         .container
-          %a.btn.btn-navbar{ "data-toggle" => "collapse", "data-target" => ".nav-collapse" }
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
+          %ul.nav.visible-phone.pull-left.view-menu-side-nav
+            %li
+              %a.toggle-menu-side-btn{:href => "#", "data-active-label" => "Menu", "data-inactive-label" => "Menu"}
+                %i.icon-th-list
+                %i.icon-remove
+                %span.hidden-phone Menu
           %a.brand{ :href => "index.html" }
             %i.icon-cloud
             Classic Pizza
-          .nav-collapse.collapse
-            %ul.nav
-              %li
-                %a{ :href => "index.html" }
-                  %i.icon-home
-                  Home
-              %li
-                %a{ :href => "menu.html" }
-                  %i.icon-th-list
-                  Menu
-          .top-buttons-w.pull-right
+          %ul.nav.hidden-phone
+            %li
+              %a{ :href => "index.html" }
+                %i.icon-home
+                Home
+            %li
+              %a{ :href => "menu.html" }
+                %i.icon-th-list
+                Menu
+          .top-buttons-w.pull-right.visible-desktop
             %a.btn.btn-primary{:href => "login.html"}
               %i.icon-user
               Login
@@ -46,8 +47,8 @@
               My Order
     .container
       .row-custom
-        .side-menu-w
-          .left-menu-w
+        .side-menu-w.visible-desktop.visible-phone
+          .side-menu-i
             .padded-nb
               %h1.main-header
                 %i.icon-reorder
@@ -73,7 +74,7 @@
                 %li.active Shopping Cart
               %h1.main-header.has-sub-header.first-header Shopping Cart
               %h4.sub-header Review your shopping cart and click checkout button when you are done
-              %table.table.cart-table.table-striped
+              %table.table.cart-table.table-striped.hidden-phone
                 %thead
                   %tr
                     %th For
@@ -86,7 +87,7 @@
                     %td
                       .cart-item-title 1 Green Salad (Side Salad)
                       .cart-item-desc
-                        \- with Salad Dressing (Light Ranch) -
+                        \- with Salad Dressing (Light Ranch):
                         %strong $1.99
                       .cart-item-buttons
                         %a{ :href => "#" }
@@ -105,7 +106,7 @@
                     %td
                       .cart-item-title 1 Chicken Wings ( 5 Wings )
                       .cart-item-desc
-                        \- with Wing Sauce (Hot) -
+                        \- with Wing Sauce (Hot):
                         %strong Free
                       .cart-item-buttons
                         %a{ :href => "#" }
@@ -124,7 +125,7 @@
                     %td
                       .cart-item-title 1 Breadsticks ( 5 pieces )
                       .cart-item-desc
-                        \- with Salad Dressing (Light Ranch) -
+                        \- with Salad Dressing (Light Ranch):
                         %strong $1.99
                       .cart-item-buttons
                         %a{ :href => "#" }
@@ -140,33 +141,109 @@
                     %td.cart-item-price
                       $3.99
                   %tr.cart-sub-totals
-                    %td.align-right.cell-label{:colspan => 3} Subtotal:
+                    %td
+                    %td
+                    %td.align-right.cell-label Subtotal:
                     %td.align-right.cell-sub-total $15.99
                   %tr.cart-sub-totals
-                    %td.align-right.cell-label{:colspan => 3} Coupon:
+                    %td
+                    %td
+                    %td.align-right.cell-label Coupon:
                     %td.align-right.cell-coupon No Coupon applied
                   %tr.cart-sub-totals
-                    %td.align-right.cell-label{:colspan => 3} Tax (5%):
+                    %td
+                    %td
+                    %td.align-right.cell-label Tax (5%):
                     %td.align-right $0.30
                   %tr.cart-sub-totals
-                    %td.align-right.cell-label{:colspan => 3} Tip:
+                    %td
+                    %td
+                    %td.align-right.cell-label Tip:
                     %td.align-right
                       .input-prepend.cart-tip-input
                         %span.add-on $
                         %input{:type => "text", :value => "0.00"}
                   %tr.cart-total-row
+                    %td
+                    %td
                     %td.align-right.cell-label{:colspan => 3} Total:
                     %td.align-right.cell-value $24.99
-              .cart-buttons
-                .row-fluid
-                  .span6
-                    %a.pull-left{:href => "menu.html"}
-                      %i.icon-circle-arrow-left
-                      Return to our menu
-                  .span6
-                    %a.btn.btn-warning.btn-large.pull-right{:href => "checkout.html"}
-                      Checkout Now
-                      %i.icon-circle-arrow-right
+              %table.table.cart-table.table-striped.visible-phone
+                %thead
+                  %tr
+                    %th Item Info
+                    %th.align-right Total Price
+                %tbody
+                  %tr
+                    %td
+                      .cart-item-title 1 Breadsticks ( 5 pieces )
+                      .cart-item-desc
+                        Qty:
+                        %strong 1
+                        x $1.99
+                      .cart-item-desc
+                        \- with Salad Dressing (Light Ranch):
+                        %strong $1.99
+                      .cart-item-desc
+                        \- for
+                        %strong me
+                      .cart-item-buttons
+                        %a{ :href => "#" }
+                          %i.icon-pencil
+                          Edit
+                        %a{ :href => "#" }
+                          %i.icon-remove
+                          Remove
+                    %td.cart-item-price $6.99
+                  %tr
+                    %td
+                      .cart-item-title 1 Chicken Wings ( 5 Wings )
+                      .cart-item-desc
+                        Qty:
+                        %strong 2
+                        x $1.99
+                      .cart-item-desc
+                        \- with Salad Dressing (Light Ranch):
+                        %strong $1.99
+                      .cart-item-desc
+                        \- with mushrooms topping:
+                        %strong $2.99
+                      .cart-item-desc
+                        \- for
+                        %strong Mike
+                      .cart-item-buttons
+                        %a{ :href => "#" }
+                          %i.icon-pencil
+                          Edit
+                        %a{ :href => "#" }
+                          %i.icon-remove
+                          Remove
+                    %td.cart-item-price $6.99
+                  %tr.cart-sub-totals
+                    %td.align-right.cell-label Subtotal:
+                    %td.align-right.cell-sub-total $15.99
+                  %tr.cart-sub-totals
+                    %td.align-right.cell-label Coupon:
+                    %td.align-right.cell-coupon No Coupon applied
+                  %tr.cart-sub-totals
+                    %td.align-right.cell-label Tax (5%):
+                    %td.align-right $0.30
+                  %tr.cart-sub-totals
+                    %td.align-right.cell-label Tip:
+                    %td.align-right
+                      .input-prepend.cart-tip-input
+                        %span.add-on $
+                        %input{:type => "text", :value => "0.00"}
+                  %tr.cart-total-row
+                    %td.align-right.cell-label Total:
+                    %td.align-right.cell-value $24.99
+              .cart-buttons.clearfix
+                %a.pull-left.hidden-phone{:href => "menu.html"}
+                  %i.icon-circle-arrow-left
+                  Return to our menu
+                %a.btn.btn-warning.btn-large.pull-right{:href => "checkout.html"}
+                  Checkout Now
+                  %i.icon-circle-arrow-right
     .footer
       .container
         .row

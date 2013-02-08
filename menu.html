@@ -21,32 +21,34 @@
     <div class='navbar navbar-inverse'>
       <div class='navbar-inner'>
         <div class='container'>
-          <a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-          </a>
           <a class='brand' href='index.html'>
             <i class='icon-cloud'></i>
             Classic Pizza
           </a>
-          <div class='nav-collapse collapse'>
-            <ul class='nav'>
-              <li>
-                <a href='index.html'>
-                  <i class='icon-home'></i>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href='menu.html'>
-                  <i class='icon-th-list'></i>
-                  Menu
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class='top-buttons-w pull-right'>
+          <ul class='nav hidden-phone'>
+            <li>
+              <a href='index.html'>
+                <i class='icon-home'></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href='menu.html'>
+                <i class='icon-th-list'></i>
+                Menu
+              </a>
+            </li>
+          </ul>
+          <ul class='nav hidden-desktop pull-right view-cart-side-nav'>
+            <li>
+              <a class='toggle-cart-side-btn' data-active-label='View Cart' data-inactive-label='Hide Cart' href='#'>
+                <i class='icon-shopping-cart'></i>
+                <i class='icon-remove'></i>
+                <span class='hidden-phone'>View Cart</span>
+              </a>
+            </li>
+          </ul>
+          <div class='top-buttons-w pull-right visible-desktop'>
             <a class='btn btn-primary' href='login.html'>
               <i class='icon-user'></i>
               Login

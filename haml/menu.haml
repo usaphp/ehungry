@@ -20,24 +20,25 @@
     .navbar.navbar-inverse
       .navbar-inner
         .container
-          %a.btn.btn-navbar{ "data-toggle" => "collapse", "data-target" => ".nav-collapse" }
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
           %a.brand{ :href => "index.html" }
             %i.icon-cloud
             Classic Pizza
-          .nav-collapse.collapse
-            %ul.nav
-              %li
-                %a{ :href => "index.html" }
-                  %i.icon-home
-                  Home
-              %li
-                %a{ :href => "menu.html" }
-                  %i.icon-th-list
-                  Menu
-          .top-buttons-w.pull-right
+          %ul.nav.hidden-phone
+            %li
+              %a{ :href => "index.html" }
+                %i.icon-home
+                Home
+            %li
+              %a{ :href => "menu.html" }
+                %i.icon-th-list
+                Menu
+          %ul.nav.hidden-desktop.pull-right.view-cart-side-nav
+            %li
+              %a.toggle-cart-side-btn{:href => "#", "data-active-label" => "View Cart", "data-inactive-label" => "Hide Cart"}
+                %i.icon-shopping-cart
+                %i.icon-remove
+                %span.hidden-phone View Cart
+          .top-buttons-w.pull-right.visible-desktop
             %a.btn.btn-primary{:href => "login.html"}
               %i.icon-user
               Login
