@@ -8789,6 +8789,10 @@ body {
     -moz-border-radius: 0px;
     border-radius: 0px;
   }
+  .side-menu-i,
+  .side-cart-i {
+    overflow-y: auto;
+  }
   .row-custom {
     margin-bottom: 0px;
   }

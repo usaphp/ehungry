@@ -24,3 +24,6 @@ $ ->
       # for desktop - make them auto height
       $(".side-menu-i").height("auto")
       $(".side-cart-i").height("auto")
+  if $(window).width() < 979
+      $(".side-menu-i").height($(".main-content-w").height())
+      $(".side-cart-i").height($(".main-content-w").height())
