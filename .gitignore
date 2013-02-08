@@ -1,0 +1,6 @@
+.DS_Store
+*.haml
+*.less
+/haml
+/assets/less
+/assets/coffee
